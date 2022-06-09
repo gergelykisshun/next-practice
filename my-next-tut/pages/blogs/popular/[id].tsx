@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticPathsContext, GetStaticPropsContext, NextPage } from 'next';
+import { GetStaticPropsContext, NextPage } from 'next';
 import axios from 'axios';
 
 type BlogPost = {
