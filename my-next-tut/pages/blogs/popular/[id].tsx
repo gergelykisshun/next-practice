@@ -1,5 +1,5 @@
 import React from 'react';
-import { GetStaticPathsContext, NextPage } from 'next';
+import { GetStaticPathsContext, GetStaticPropsContext, NextPage } from 'next';
 import axios from 'axios';
 
 type BlogPost = {
@@ -17,10 +17,11 @@ const IndividualBlogPage: NextPage<Props> = ({id}) => {
   )
 }
 
-export const getStaticProps = async (context: GetStaticPathsContext) => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   // console.log(context.params);
-  const { id } = context.params;
+  const id  = context.params!.id;
   console.log(id);
+  // fetch here again with the id, get single resource
   return {
     props: {
       id
