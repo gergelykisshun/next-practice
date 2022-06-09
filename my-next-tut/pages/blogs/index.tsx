@@ -9,4 +9,5 @@ const Blogs: NextPage<Props> = (props) => {
   )
 }
 
+
 export default Blogs;
