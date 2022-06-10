@@ -7,6 +7,8 @@ type Props = {}
 const Logout: NextPage<Props> = (props) => {
 
     const router = useRouter();
+    console.log(router.query);
+    
 
   return (
     <div onClick={() => router.push('/login')}>Logout</div>
