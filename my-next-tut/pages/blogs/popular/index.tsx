@@ -26,7 +26,11 @@ const popular: NextPage<Props> = ({posts}) => {
       {users && <div className={styles.user}>{users.users}</div>}
       {posts.map(post => <p key={post.id}>{post.title}</p>)}
       <div className={styles.card}>
-        <h2>Something awsome</h2>
+        <div className={styles['card-content']}>
+          <h2 className={styles['card-title']}>Something awsome</h2>
+          <p className={styles['card-body']}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, delectus cum! Exercitationem laboriosam </p>
+          <button>Learn more</button>
+        </div>
       </div>
     </>
   )

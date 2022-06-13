@@ -6,5 +6,29 @@
 }
 
 .card {
+    color: $neutral-100;
+    background-image: url(https://i.pinimg.com/564x/e9/29/1c/e9291cc39e820cd4afc6e58618dfc9e0.jpg);
+    background-size: cover;
+    padding-top: 10rem;
+    max-width: 35ch; // it is 35 characters long
     
+    .card-content {
+        padding: 20px;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.5) 10%,
+            rgba(0, 0, 0, 0.8)
+        );
+    }
+
+    .card-title {
+        background-color: black;
+        color: white;
+    }
+    .card-body {
+
+    }
+    button {
+
+    }
 }
