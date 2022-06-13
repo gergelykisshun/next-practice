@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NextPage, GetStaticProps } from 'next';
 import axios from 'axios';
+import styles from './index.module.scss';
 
 type Props = {
   posts: {id: number, title: string}[];
@@ -22,8 +23,11 @@ const popular: NextPage<Props> = ({posts}) => {
   
   return (
     <>
-      {users && <div>{users.users}</div>}
+      {users && <div className={styles.user}>{users.users}</div>}
       {posts.map(post => <p key={post.id}>{post.title}</p>)}
+      <div className={styles.card}>
+        <h2>Something awsome</h2>
+      </div>
     </>
   )
 }
