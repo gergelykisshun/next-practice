@@ -1,4 +1,6 @@
 @import '../../../styles/variables.scss';
+$padding: 20px;
+$border-radius: 6px;
 
 .user {
     background-color: $primary;
@@ -11,9 +13,11 @@
     background-size: cover;
     padding-top: 10rem;
     max-width: 35ch; // it is 35 characters long
+    border-radius: $border-radius;
+    overflow: hidden;
     
     .card-content {
-        padding: 20px;
+        padding: $padding;
         background: linear-gradient(
             rgba(0, 0, 0, 0),
             rgba(0, 0, 0, 0.5) 10%,
@@ -22,13 +26,35 @@
     }
 
     .card-title {
-        background-color: black;
-        color: white;
+        position: relative;
+        width: max-content;
+    }
+
+    .card-title::after {
+        content: "";
+        position: absolute;
+        left: calc($padding * -1);
+        bottom: -2px;
+        height: 3px;
+        width: calc(100% + $padding);
+        background: $accent;
     }
     .card-body {
-
+        line-height: 25px;
     }
+
     button {
+        background-color: $accent;
+        color: $neutral-900;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: $border-radius;
 
+        &:hover,
+        &:focus {
+            background-color: $neutral-100;
+        }
     }
+
 }
